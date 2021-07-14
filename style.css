@@ -310,7 +310,7 @@ button:hover{
     }
     .banner-descri{
         width: 278px;
-        margin-top: 112;
+        margin-top: 113px;
     }
     .banner-descri h1{
         font-size: 36px;
@@ -319,11 +319,29 @@ button:hover{
     .banner-image{
         width: 329px;
     }
-    .banner-image img{
-        width: 100%;
-        margin: 0px;
-    }
+    
     .players{
         grid-template-columns: repeat(1,1fr);
     }
+    .banner .banner-section .banner-image {
+        width: 556px;
+        margin-top: 0;
+    }
+    .banner .banner-section .banner-image img {
+        width: 60%;
+        margin-top: 0;
+    }
+    .footer-section {
+        padding-top: 47px;
+        
+    }
+    .footer-logo img {
+        width: 271px;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
+    .players{
+        grid-template-columns: repeat(2,1fr);
+    }
+
 }
