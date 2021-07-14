@@ -16,10 +16,12 @@ body{
 /* header navbar */
 
 nav .nav-section{
+    position: relative;
     display: flex;
     justify-content: center;
     margin-top: 42px;
     color: white;
+    z-index: 10;
 }
 nav .nav-section .navbar{
     width: 1162px;
@@ -50,6 +52,12 @@ a.button{
     background: #E02C6D;
     padding: 10px 24px;
     color: white;
+    transition: .5s linear;
+}
+a.button:hover{
+    background: #ff639c;
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.459);
+
 }
 
 
@@ -68,7 +76,8 @@ a.button{
 .banner-grid{
     width: 1143px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);        
+    grid-template-columns: repeat(2, 1fr); 
+    grid-row-gap: 30px;
 }
 
 .banner .banner-section .banner-image{
@@ -77,7 +86,9 @@ a.button{
 }
 .banner .banner-section .banner-image img{
     width: 100%;
+    
 }
+
 .banner-descri h1{
     font-size: 64px;
     color: white;
@@ -89,6 +100,140 @@ a.button{
 .banner-descri{
     width: 485px;
     margin-top: 207px;
+}
+
+
+
+/* article section  */
+
+.player-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.player{
+    box-sizing: border-box;
+    width: 330px;
+    height: 474px;
+    padding: 15px 15px 33px 15px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.player-image img{
+    width: 300px;
+    height: 256;
+    margin-bottom: 16px;
+}
+
+.player-descri h3{
+font-size: 28px;
+font-weight: 700;
+line-height: 40px;
+margin-bottom: 10px;
+}
+
+.player-descri p{
+    color: #6C6C6C;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+}
+
+
+
+
+/* table section */
+.player-table h1{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.table-section{
+    display: flex;
+    justify-content: center;
+}
+table {
+    border: 2px solid E02C6D;
+    background-color: #b827b8;
+    width: 80%;
+    text-align: center;
+    border-collapse: collapse;
+    color:white;
+}
+
+
+th {
+    font-size: 19px;
+    font-weight: bold;    
+    border-bottom: 2px solid #ffffff;
+    background: #E02C6D;
+    padding: 20px 2px;
+}
+
+
+td {
+    font-size: 16px;
+    padding: 20px 2px;    
+}
+
+tr:nth-child(even) {
+    background: #fd6b09;
+}
+tr:nth-child(odd) {
+    background: #8165fa;
+}
+thead {
+    background: #E02C6D;
+}
+
+
+
+/* login-form */
+
+.form-section{
+    margin-top: 50px;
+    display: flex;
+    justify-content:center;
+}
+.login-form{
+    width: 80%;
+    height: 300px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 40px rgba(199, 198, 198, 0.349);
+}
+
+input{
+    background: none;
+    border: none;
+    border-bottom: 2px solid tomato;
+    outline: none;
+    padding: 15px 0;
+    width: 50%;
+
+}
+button{
+    margin-top: 20px;
+    background-image: linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+    padding: 8px 25px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 1s linear;
+
+}
+button:hover{
+    background-image: linear-gradient( 135deg, #F761A1 10%, #8C1BAB 100%);
 }
 
 
@@ -134,43 +279,51 @@ a.button{
 }
 
 
-/* article section  */
 
-.player-section{
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-}
-.player{
-    box-sizing: border-box;
-    width: 330px;
-    height: 474px;
-    padding: 15px 15px 33px 15px;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-}
-.player-image img{
-    width: 300px;
-    height: 256;
-    margin-bottom: 16px;
-}
+/* @media quierey */
 
-.player-descri h3{
-font-size: 28px;
-font-weight: 700;
-line-height: 40px;
-margin-bottom: 10px;
-}
-
-.player-descri p{
-    color: #6C6C6C;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-}
-
-.players{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 27px;
+@media only screen and (max-width: 600px) {
+    .nav-section{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px;
+    }
+    nav .nav-section .navbar ul {
+      display: none;
+    }
+    .navbar span i{
+        font-size: 25px;
+    }
+    .bnner{
+        margin-top: -110px;
+    }
+    header{
+        background-color: #2D25A0;
+    }
+    .banner-grid {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px;
+        display: grid;
+        grid-row-gap: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .banner-descri{
+        width: 278px;
+        margin-top: 112;
+    }
+    .banner-descri h1{
+        font-size: 36px;
+        line-height: 50px;
+    } 
+    .banner-image{
+        width: 329px;
+    }
+    .banner-image img{
+        width: 100%;
+        margin: 0px;
+    }
+    .players{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
